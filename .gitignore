@@ -1,6 +1,7 @@
 # 编译输出的二进制文件
 target/
 cmake-build-debug/
+cmake-build-release/
 
 # CLion项目文件夹
 .idea/
