@@ -5,7 +5,11 @@
 #ifndef PHANTOM3_PHANTOM_H
 #define PHANTOM3_PHANTOM_H
 
-#define API _declspec(dllexport)
+#ifdef __GNUC__
+#define API
+#else
+#define API _declspec(dllexport) // only use this on msvc
+#endif
 
 namespace PhtCore {
 //    class API Phantom {

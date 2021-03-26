@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.17)
 
 # Configure by yourself
 project(Phantom3)
-set(PROJECT_DIR "D:/Codebase/Phantom3/Phantom3")
+set(PROJECT_DIR "~/Codebase/Phantom3")
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_PREFIX_PATH "C:/Qt/6.0.2/msvc2019_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "/opt/Qt/6.0.2/gcc_64/lib/cmake")
 set(QT_VERSION 6)
 # End
 

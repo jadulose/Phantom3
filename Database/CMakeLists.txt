@@ -21,12 +21,14 @@ include_directories(${LIB_INCLUDE})
 target_link_libraries(${PROJECT_NAME} ${REQUIRED_LIBS_QUALIFIED} ${LIB_LINK})
 
 include(${PROJECT_DIR}/copy_dlls.cmake)
-if (NOT EXISTS "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll")
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E make_directory
-            "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/")
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy
-            "${QT_INSTALL_PATH}/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll"
-            "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll")
+if (WIN32)
+    if (NOT EXISTS "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll")
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E make_directory
+                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/")
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy
+                "${QT_INSTALL_PATH}/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll"
+                "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/sqldrivers/qsqlite${DEBUG_SUFFIX}.dll")
+    endif ()
 endif ()

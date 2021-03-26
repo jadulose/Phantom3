@@ -6,7 +6,7 @@
 
 void PhtDB::sayHello() {
     QSqlDatabase db =QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(R"(D:\Codebase\Phantom3\PhantomDataLoader\data.db)");
+    db.setDatabaseName(R"(data.db)");
     if (db.open())
         qDebug("Successfully connected database.");
     db.close();

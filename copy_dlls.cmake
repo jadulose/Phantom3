@@ -1,5 +1,5 @@
 # Copy Qt DLLs to target directory
-if (WIN32)
+if (WIN32) # only do this on windows
     set(QT_INSTALL_PATH "${CMAKE_PREFIX_PATH}/../..")
     # platforms/qwindows.dll & styles/qwindowsvistastyle.dll
     if (NOT EXISTS "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll")

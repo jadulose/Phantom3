@@ -5,7 +5,11 @@
 #ifndef PHANTOM3_DATABASE_H
 #define PHANTOM3_DATABASE_H
 
+#ifdef __GNUC__
+#define API
+#else
 #define API _declspec(dllexport)
+#endif
 
 #include <QSqlDatabase>
 
