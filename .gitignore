@@ -5,6 +5,7 @@ cmake-build-release/
 
 # CLion项目文件夹
 .idea/
+/.clion.source.upload.marker
 
 # Config文件
 /config.cmake
