@@ -103,7 +103,7 @@ public:
         PhantomEditor->setCentralWidget(centralwidget);
         menubar = new QMenuBar(PhantomEditor);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 579, 22));
+        menubar->setGeometry(QRect(0, 0, 579, 27));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         PhantomEditor->setMenuBar(menubar);
@@ -131,7 +131,7 @@ public:
         actionExit->setShortcut(QCoreApplication::translate("PhantomEditor", "Esc", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionOpen->setText(QCoreApplication::translate("PhantomEditor", "Open", nullptr));
-        label->setText(QCoreApplication::translate("PhantomEditor", "\344\275\240\345\245\275\357\274\214\344\270\226\347\225\214\357\274\201", nullptr));
+        label->setText(QCoreApplication::translate("PhantomEditor", "\344\275\240no\345\245\275\357\274\214\344\270\226w\347\225\214\357\274\201", nullptr));
         pushButton->setText(QCoreApplication::translate("PhantomEditor", "\347\202\271\346\210\221", nullptr));
         menu->setTitle(QCoreApplication::translate("PhantomEditor", "File", nullptr));
     } // retranslateUi

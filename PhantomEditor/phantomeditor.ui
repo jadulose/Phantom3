@@ -51,7 +51,7 @@
          </font>
         </property>
         <property name="text">
-         <string>你好，世界！</string>
+         <string>你no好，世w界！</string>
         </property>
        </widget>
       </item>
@@ -111,7 +111,7 @@
      <x>0</x>
      <y>0</y>
      <width>579</width>
-     <height>22</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
