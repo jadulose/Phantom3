@@ -48,7 +48,7 @@ public:
     {
         if (PhantomEditor->objectName().isEmpty())
             PhantomEditor->setObjectName(QString::fromUtf8("PhantomEditor"));
-        PhantomEditor->resize(800, 600);
+        PhantomEditor->resize(579, 413);
         actionExit = new QAction(PhantomEditor);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionOpen = new QAction(PhantomEditor);
@@ -103,7 +103,7 @@ public:
         PhantomEditor->setCentralWidget(centralwidget);
         menubar = new QMenuBar(PhantomEditor);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 27));
+        menubar->setGeometry(QRect(0, 0, 579, 22));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         PhantomEditor->setMenuBar(menubar);
@@ -118,6 +118,7 @@ public:
 
         retranslateUi(PhantomEditor);
         QObject::connect(pushButton, &QPushButton::clicked, PhantomEditor, qOverload<>(&QMainWindow::close));
+        QObject::connect(actionExit, &QAction::triggered, PhantomEditor, qOverload<>(&QMainWindow::close));
 
         QMetaObject::connectSlotsByName(PhantomEditor);
     } // setupUi
@@ -126,6 +127,9 @@ public:
     {
         PhantomEditor->setWindowTitle(QCoreApplication::translate("PhantomEditor", "Phantom Editor", nullptr));
         actionExit->setText(QCoreApplication::translate("PhantomEditor", "Exit", nullptr));
+#if QT_CONFIG(shortcut)
+        actionExit->setShortcut(QCoreApplication::translate("PhantomEditor", "Esc", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionOpen->setText(QCoreApplication::translate("PhantomEditor", "Open", nullptr));
         label->setText(QCoreApplication::translate("PhantomEditor", "\344\275\240\345\245\275\357\274\214\344\270\226\347\225\214\357\274\201", nullptr));
         pushButton->setText(QCoreApplication::translate("PhantomEditor", "\347\202\271\346\210\221", nullptr));
