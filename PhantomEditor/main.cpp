@@ -13,5 +13,6 @@ int main(int argc, char *argv[]) {
     pht_editor.show();
     PhtCore::sayHello();
     PhtDB::sayHello();
+    PhtCore::sayHello();
     return QApplication::exec();
 }
