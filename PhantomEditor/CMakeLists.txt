@@ -15,7 +15,8 @@ set(LIB_LINK phtcore${DEBUG_SUFFIX} phtdatabase${DEBUG_SUFFIX})
 # Project sources
 set(PROJECT_SOURCES
         main.cpp
-        phantomeditor.cpp phantomeditor.h phantomeditor.ui)
+        phantomeditor.cpp phantomeditor.h phantomeditor.ui
+        scenewidget.cpp scenewidget.h scenewidget.ui resourcewidget.cpp resourcewidget.h resourcewidget.ui)
 
 if (NOT DEBUG_SUFFIX MATCHES "d")
     set(PROJECT_SOURCES WIN32 ${PROJECT_SOURCES})
